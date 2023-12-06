@@ -14,7 +14,7 @@ const HireMe = () => {
         <LinkButton
           href=""
           label="Hire Me"
-          className="fixed h-[120px] w-[120px] !rounded-full text-center !text-2xl shadow-md hover:shadow-lg"
+          className="fixed h-[120px] w-[120px] !rounded-full bg-dark text-center !text-2xl text-light opacity-80 shadow-md hover:border-dark hover:bg-light hover:text-dark hover:opacity-100 hover:shadow-lg"
         />
       </div>
     </div>
