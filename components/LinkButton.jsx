@@ -10,7 +10,7 @@ const LinkButton = ({
   return (
     <Link
       href={href}
-      className={`${className} flex-center rounded-lg border-2 border-solid p-2.5 px-6 text-lg`}
+      className={`${className} flex-center cursor-pointer rounded-lg border-2 border-solid p-2.5 px-6 text-lg`}
       target={"_blank"}
       download={isDownload}
     >

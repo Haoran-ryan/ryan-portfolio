@@ -1,5 +1,5 @@
 "use client";
-
+import SideBar from "./SideBar";
 import Link from "next/link";
 import Image from "next/image";
 import { usePathname } from "next/navigation";
@@ -41,12 +41,8 @@ const NavBar = () => {
           sequence={[
             // Same substring at the start will only be typed once, initially
             "My name is Ryan Guo 👋",
-            1000,
-            "你好 🇨🇳",
-            1000,
-            "I am a full stack developer 😄",
-            1000,
-            "我是名全栈工程师 📱",
+            800,
+            "I am a full stack developer 📱",
             1000,
           ]}
           speed={50}
@@ -81,6 +77,7 @@ const NavBar = () => {
           </MotionLink>
         ))}
       </nav>
+      <SideBar />
     </header>
   );
 };
