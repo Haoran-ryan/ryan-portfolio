@@ -24,6 +24,9 @@ module.exports = {
         primaryDark: "#58e6d9",
         "coral-red": "#FF6452",
       },
+      animation: {
+        "spin-slow": "spin 10s linear infinite",
+      },
     },
   },
   plugins: [],

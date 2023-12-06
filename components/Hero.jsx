@@ -1,5 +1,6 @@
 import AnimatedText from "./AnimatedText";
 import LinkButton from "./LinkButton";
+import HireMe from "./HireMe";
 import Image from "next/image";
 import profilePic from "@/public/images/portrait.png";
 import FileDownloadIcon from "@mui/icons-material/FileDownload";
@@ -42,6 +43,7 @@ const Hero = () => {
           />
         </div>
       </div>
+      <HireMe />
     </div>
   );
 };
