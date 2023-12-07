@@ -104,3 +104,23 @@ export const statistics = [
   { label: "Projects Completed", value: 10 },
   { label: "Years of development", value: 1 },
 ];
+
+export const myFullStackSkills = [
+  { name: "NextJS", x: 0, y: 0 },
+  { name: "HTML", x: 0, y: 0 },
+  { name: "APIs", x: 0, y: 0 },
+  { name: "ReactJS", x: 0, y: 0 },
+  { name: "Python", x: 0, y: 0 },
+  { name: "JavaScript", x: 0, y: 0 },
+  { name: "Tailwind", x: 0, y: 0 },
+  { name: "MongoDB", x: 0, y: 0 },
+  { name: "Framer Motion", x: 0, y: 0 },
+  { name: "Google Firestore", x: 0, y: 0 },
+  { name: "PostgreSQL", x: 0, y: 0 },
+  { name: "Ruby on Rails", x: 0, y: 0 },
+  { name: "Algorithms", x: 0, y: 0 },
+];
+
+export function getRandomNumber(min, max) {
+  return Math.random() * (max - min) + min;
+}

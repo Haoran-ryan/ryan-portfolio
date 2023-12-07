@@ -1,10 +1,43 @@
-import React from "react";
+"use client";
+import { motion } from "framer-motion";
+import { myFullStackSkills, getRandomNumber } from "@/constants";
+
+export const SkillCard = ({ label, x, y }) => {
+  return (
+    <motion.div
+      whileHover={{ scale: 1.1 }}
+      initial={{ x: 0, y: 0 }}
+      whileInView={{ x, y }}
+      transition={{ duration: 1.5 }}
+      className="flex-center absolute cursor-pointer rounded-full border-dark bg-dark px-6 py-3 font-semibold text-light opacity-80 shadow-sm hover:z-50 hover:border hover:bg-light hover:text-dark/75 hover:opacity-100 hover:shadow-xl"
+    >
+      {label}
+    </motion.div>
+  );
+};
 
 const Skills = () => {
   return (
     <>
-      <h2 className="mt-64 w-full text-center text-8xl font-bold">Skillsls</h2>
-      <div className="flex-center relative h-screen w-full rounded-full bg-circularLight"></div>
+      <h2 className="mt-64 w-full text-center text-8xl font-bold text-dark/90">
+        Skills
+      </h2>
+      <div className="flex-center relative h-screen w-full rounded-full bg-circularLight">
+        <motion.div
+          whileHover={{ scale: 1.1 }}
+          className="flex-center cursor-pointer rounded-full bg-dark px-6 py-10 text-light shadow-dark"
+        >
+          Full Stack
+        </motion.div>
+        {myFullStackSkills.map((skill) => (
+          <SkillCard
+            key={skill.name}
+            label={skill.name}
+            x={`${getRandomNumber(-28, 28)}vw`}
+            y={`${getRandomNumber(-28, 28)}vh`}
+          />
+        ))}
+      </div>
     </>
   );
 };
