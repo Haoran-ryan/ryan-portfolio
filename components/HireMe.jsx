@@ -36,11 +36,14 @@ const HireMe = () => {
         className="absolute bottom-16 right-10 cursor-pointer"
       >
         {open ? (
-          <UnfoldLessIcon fontSize="large" />
+          <UnfoldLessIcon
+            fontSize="large"
+            className="hover:scale-150 hover:animate-pulse"
+          />
         ) : (
           <UnfoldMoreIcon
             fontSize="large"
-            className="animate-pulse hover:scale-125 hover:animate-none"
+            className="animate-bounce hover:scale-150 hover:animate-none"
           />
         )}
       </div>

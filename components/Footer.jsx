@@ -15,10 +15,10 @@ const Footer = () => {
       initial="hidden"
       whileInView="show"
       viewport={{ once: false, amount: 0.25 }}
-      className="mt-20 w-full border-t-2 border-solid border-dark pt-5 font-medium"
+      className="mt-20 w-full border-t-2 border-solid border-dark pt-5 font-medium "
     >
-      <motion.div variants={footerVariants} className="flex-between my-10">
-        <div className="flex-auto text-2xl font-bold leading-loose text-dark">
+      <motion.div variants={footerVariants} className="flex-center my-10">
+        <div className="ml-20 flex-auto text-2xl font-bold leading-loose text-dark xl:ml-40">
           <span>Let us make something amazing together</span>
           <br />
           <span>
@@ -34,7 +34,7 @@ const Footer = () => {
           </span>
         </div>
         <div className="flex-1">
-          <div className={`flex-start flex-wrap gap-x-6 gap-y-4`}>
+          <div className={`flex-start flex-wrap gap-6`}>
             {myFullStack.map((skill) => (
               <motion.div
                 whileHover={{ y: -5 }}

@@ -18,9 +18,7 @@ export default function RootLayout({ children }) {
         <div className=" relative min-h-screen w-full bg-light font-mont">
           <NavBar />
           {children}
-          <Container>
-            <Footer />
-          </Container>
+          <Footer />
         </div>
       </body>
     </html>
