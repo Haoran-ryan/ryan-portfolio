@@ -101,6 +101,6 @@ export const bio = {
 };
 
 export const statistics = [
-  { label: "Projects Completed", value: "10+" },
-  { label: "Years of development", value: "1+" },
+  { label: "Projects Completed", value: 10 },
+  { label: "Years of development", value: 1 },
 ];
