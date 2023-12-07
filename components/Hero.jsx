@@ -8,15 +8,15 @@ import AlternateEmailIcon from "@mui/icons-material/AlternateEmail";
 
 const Hero = () => {
   return (
-    <div className="flex-between w-full flex-col md:flex-row">
-      <div className="w-full md:w-1/2">
+    <div className="flex-between w-full flex-col gap-x-6 md:flex-row">
+      <div className="w-full md:w-1/3">
         <Image
           src={profilePic}
           alt="hero"
           className=" h-auto w-full md:w-[35vw]"
         />
       </div>
-      <div className="flex w-full flex-col items-center self-center md:w-1/2">
+      <div className="flex w-full flex-col items-center self-center md:w-2/3">
         {/* <span className="text-coral-red">Crafting </span>Digital Alchemy */}
         <AnimatedText
           text="Crafting Digital Alchemy with Code and Design"
@@ -31,14 +31,14 @@ const Hero = () => {
           <LinkButton
             label="Resume"
             href="http://www.google.com"
-            className="border-transparent bg-dark font-semibold text-light hover:border-dark hover:bg-light hover:text-dark"
+            className="border-transparent bg-dark font-semibold text-light shadow-md hover:border-dark hover:bg-light hover:text-dark hover:shadow-xl"
             isDownload={true}
             icon={<FileDownloadIcon className="ml-1 w-6" />}
           />
           <LinkButton
             label="Contact"
             href="mailto:gryan@outlook.com.au"
-            className="ml-4 bg-light font-medium text-dark hover:bg-dark hover:text-light"
+            className="ml-4 !border-[0] bg-light font-medium text-dark hover:underline"
             icon={<AlternateEmailIcon className="ml-1 w-6" />}
           />
         </div>

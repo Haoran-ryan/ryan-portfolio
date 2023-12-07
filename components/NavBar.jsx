@@ -12,7 +12,12 @@ const MotionLink = motion(Link);
 export const NavLinkCard = ({ title, href, className = null }) => {
   const pathName = usePathname();
   return (
-    <Link href={href} className={`${className} group relative`}>
+    <Link
+      href={href}
+      className={`${className} group relative uppercase hover:text-dark ${
+        pathName === href ? "text-dark" : "text-dark/50"
+      }`}
+    >
       {title}
       <span
         className={`ease absolute -bottom-0.5 left-0 inline-block h-[1px] bg-dark transition-[width] duration-300 group-hover:w-full ${
@@ -70,7 +75,7 @@ const NavBar = () => {
             href={social.url}
             target={"_blank"}
             key={social.name}
-            whileHover={{ y: -2 }}
+            whileHover={{ y: -4 }}
             whileTap={{ scale: 0.9 }}
           >
             {social.icon}

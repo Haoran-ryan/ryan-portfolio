@@ -15,7 +15,7 @@ const Footer = () => {
       initial="hidden"
       whileInView="show"
       viewport={{ once: false, amount: 0.25 }}
-      className="mt-10 w-full border-t-2 border-solid border-dark pt-5 font-medium"
+      className="mt-20 w-full border-t-2 border-solid border-dark pt-5 font-medium"
     >
       <motion.div variants={footerVariants} className="flex-between my-10">
         <div className="flex-auto text-2xl font-bold leading-loose text-dark">
@@ -23,10 +23,12 @@ const Footer = () => {
           <br />
           <span>
             Start by{" "}
-            <Link href="mailto:gryan@outlook.com.au" className="cursor-pointer">
-              saying{" "}
-              <span className=" text-3xl text-coral-red ">
-                &quot;Hi&quot; {<LoyaltyIcon color="inherit" />}
+            <Link
+              href="mailto:gryan@outlook.com.au"
+              className="cursor-pointer hover:underline hover:shadow-sm"
+            >
+              <span className=" blue_gradient text-3xl ">
+                saying &quot;Hi&quot; {<LoyaltyIcon color="primary" />}
               </span>
             </Link>
           </span>
