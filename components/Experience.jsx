@@ -1,5 +1,7 @@
+"use client";
 import Link from "next/link";
 import { MyExperiences } from "@/constants";
+import { useScroll, useMotionValue } from "framer-motion";
 
 export const ExperienceCard = ({
   label,
@@ -33,30 +35,34 @@ export const ExperienceCard = ({
 };
 
 const Experience = () => {
+  const { scrollYProgress } = useScroll();
   return (
     <>
       <h2 className="my-64 w-full text-center text-8xl font-bold text-dark/90">
         Experience
       </h2>
       <div className="relative mx-auto w-[75%]">
-        {MyExperiences.map((project, index) => (
-          <ExperienceCard
-            key={project.label}
-            label={project.label}
-            org={project.org}
-            orgLink={project.orgLink}
-            time={project.time}
-            work={project.work}
-            address={project.address}
-            className={
-              index === 0
-                ? "mt-0"
-                : "" || index === MyExperiences.length - 1
-                ? "mb-0"
-                : ""
-            }
-          />
-        ))}
+        <div className="absolute left-8 top-0 h-full w-[4px] origin-top bg-dark" />
+        <ul className="ml-4 flex w-full flex-col items-start justify-between">
+          {MyExperiences.map((project, index) => (
+            <ExperienceCard
+              key={project.label}
+              label={project.label}
+              org={project.org}
+              orgLink={project.orgLink}
+              time={project.time}
+              work={project.work}
+              address={project.address}
+              className={
+                index === 0
+                  ? "mt-0"
+                  : "" || index === MyExperiences.length - 1
+                  ? "mb-0"
+                  : ""
+              }
+            />
+          ))}
+        </ul>
       </div>
     </>
   );
