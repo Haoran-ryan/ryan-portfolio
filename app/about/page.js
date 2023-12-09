@@ -1,12 +1,12 @@
 import AnimatedText from "@/components/AnimatedText";
 import AnimatedNumbers from "@/components/AnimatedNumbers";
-import Head from "next/head";
 import Container from "@/components/Container";
-import Skills from "@/components/Skills";
-import Image from "next/image";
-import { bio, statistics } from "@/constants";
-import profilePicture from "public/images/portrait-front-bg-removed.png";
 import Experience from "@/components/Experience";
+import Head from "next/head";
+import Image from "next/image";
+import Skills from "@/components/Skills";
+import profilePicture from "public/images/portrait-front-bg-removed.png";
+import { bio, statistics, MyExperiences } from "@/constants";
 
 export const StaticCard = ({ statistics }) => {
   return (
@@ -28,11 +28,11 @@ const About = () => {
         <title>Ryan Guo | About page</title>
         <meta name="description" content="work and education about Ryan Guo" />
       </Head>
-      <main className="flex-center">
+      <main className="flex-center mb-64">
         <Container className="flex-center w-full flex-col">
           <AnimatedText
             text={bio.title}
-            className="py-20 text-6xl md:text-8xl"
+            className="pb-20 text-6xl md:text-8xl"
           />
           <div className="grid w-full grid-cols-8 gap-16">
             <div className="flex-between col-span-full flex-col md:col-span-3 ">
@@ -67,7 +67,7 @@ const About = () => {
             ))}
           </div>
           <Skills />
-          <Experience />
+          <Experience experiences={MyExperiences} title="Experience" />
         </Container>
       </main>
     </>

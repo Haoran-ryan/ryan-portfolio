@@ -1,7 +1,9 @@
 "use client";
+
+import Circle from "./Circle";
 import Link from "next/link";
-import { MyExperiences } from "@/constants";
-import { useScroll, useMotionValue } from "framer-motion";
+import { useRef } from "react";
+import { useScroll, motion } from "framer-motion";
 
 export const ExperienceCard = ({
   label,
@@ -12,14 +14,23 @@ export const ExperienceCard = ({
   work,
   className = "",
 }) => {
+  const ref = useRef(null);
   return (
-    <li className={`${className} flex-between mx-auto my-8 w-[68%] flex-col`}>
-      <div>
+    <li
+      ref={ref}
+      className={`${className} flex-between mx-auto my-8 w-[68%] flex-col`}
+    >
+      <Circle reference={ref} />
+      <motion.div
+        initial={{ y: 50 }}
+        whileInView={{ y: 0 }}
+        transition={{ duration: 0.5, type: "spring" }}
+      >
         <h3 className="text-2xl font-bold capitalize">
           {label} &nbsp;{" "}
           <Link
             href={orgLink}
-            className="capitalize text-primary"
+            className="capitalize text-coral-red"
             target="_blank"
           >
             @{org}
@@ -29,22 +40,31 @@ export const ExperienceCard = ({
           {time} | {address}
         </span>
         <p className="w-full font-medium">{work}</p>
-      </div>
+      </motion.div>
     </li>
   );
 };
 
-const Experience = () => {
-  const { scrollYProgress } = useScroll();
+const Experience = ({ experiences, title }) => {
+  const ref = useRef();
+  const { scrollYProgress } = useScroll({
+    target: ref,
+    offset: ["start end", "center start"],
+  });
   return (
     <>
       <h2 className="my-64 w-full text-center text-8xl font-bold text-dark/90">
-        Experience
+        {title}
       </h2>
       <div className="relative mx-auto w-[75%]">
-        <div className="absolute left-8 top-0 h-full w-[4px] origin-top bg-dark" />
+        {/* vertical scroll animation */}
+        <motion.div
+          style={{ scaleY: scrollYProgress }}
+          className="absolute left-9 h-full w-[4px] origin-top bg-dark"
+          ref={ref}
+        />
         <ul className="ml-4 flex w-full flex-col items-start justify-between">
-          {MyExperiences.map((project, index) => (
+          {experiences.map((project, index) => (
             <ExperienceCard
               key={project.label}
               label={project.label}
@@ -56,7 +76,7 @@ const Experience = () => {
               className={
                 index === 0
                   ? "mt-0"
-                  : "" || index === MyExperiences.length - 1
+                  : "" || index === experiences.length - 1
                   ? "mb-0"
                   : ""
               }

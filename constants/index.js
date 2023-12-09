@@ -179,7 +179,7 @@ export const MyExperiences = [
   },
   {
     label: "Interpreter",
-    org: "Self Employed",
+    org: "Freelance",
     orgLink: "https://www.linkedin.com/company/haoran-ryan/",
     time: "May 2011 - present",
     address: "Sydney",
@@ -187,7 +187,7 @@ export const MyExperiences = [
   },
   {
     label: "Tutor and manager",
-    org: "Sydney Institute of Interpreting and Translating",
+    org: "SIIT",
     orgLink: "https://www.linkedin.com/company/haoran-ryan/",
     time: "June 2012 - Jan 2023",
     address: "Sydney",
