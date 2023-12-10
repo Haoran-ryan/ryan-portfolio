@@ -197,30 +197,30 @@ export const MyExperiences = [
 
 export const MyEducation = [
   {
-    label: "Master of Information Technlogy",
-    org: "UNSW",
+    label: "Master of Information Technology",
+    org: "University of New South Wales (UNSW)",
     orgLink:
       "https://www.handbook.unsw.edu.au/postgraduate/programs/2024/8543?year=2024",
-    time: "Feb 2023 - present",
+    time: "Feb 2023 - Present",
     address: "Sydney",
-    work: "Stuyding the master on a part-time basis. Because I would like to not only be able to develop but also to understand the underlying logics, including the algorithms, best practices. This course is a gift to myself helping me climb the ladder of success.",
+    work: "Currently pursuing a part-time Master's in Information Technology. This program is instrumental in deepening my understanding of software development, algorithms, and industry best practices. It represents a key step in my ongoing professional growth and development.",
   },
   {
     label: "Graduate Certificate in Computing",
-    org: "UNSW",
+    org: "University of New South Wales (UNSW)",
     orgLink:
       "https://www.handbook.unsw.edu.au/postgraduate/programs/2024/7543?year=2024",
-    time: "Feb 2022 - December 2022",
+    time: "Feb 2022 - Dec 2022",
     address: "Sydney",
-    work: "Graduated with distinction on WAM73. I am grateful for the course, not only because it introduced python programming and algorithms to me, but also after weathering through the sleepless nights, I become resilient and confident in coding.",
+    work: "Completed with a WAM of 73. This program was pivotal in introducing me to Python programming and algorithms. The rigorous coursework honed my resilience and confidence in software development.",
   },
   {
-    label: "Undergradute Certificate in Data Engineering",
+    label: "Undergraduate Certificate in Data Engineering",
     org: "TAFE NSW",
     orgLink:
       "https://www.tafensw.edu.au/course-areas/information-and-communication-technology/courses/undergraduate-certificate-in-data-engineering--HE20545V01",
-    time: "Feb 2022 - December 2022",
+    time: "Feb 2022 - Dec 2022",
     address: "Sydney",
-    work: "Graduated with distinction on WAM73. I am grateful for the course, not only because it introduced python programming and algorithms to me, but also after weathering through the sleepless nights, I become resilient and confident in coding.",
+    work: "Graduated with distinction. This course offered a foundational insight into coding, covering Python, SQL, and introductory concepts in machine learning with Pandas. It was an essential step in my early career in data engineering.",
   },
 ];

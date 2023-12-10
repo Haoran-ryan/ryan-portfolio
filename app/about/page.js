@@ -6,7 +6,7 @@ import Head from "next/head";
 import Image from "next/image";
 import Skills from "@/components/Skills";
 import profilePicture from "public/images/portrait-front-bg-removed.png";
-import { bio, statistics, MyExperiences } from "@/constants";
+import { bio, statistics, MyExperiences, MyEducation } from "@/constants";
 
 export const StaticCard = ({ statistics }) => {
   return (
@@ -68,6 +68,7 @@ const About = () => {
           </div>
           <Skills />
           <Experience experiences={MyExperiences} title="Experience" />
+          <Experience experiences={MyEducation} title="Education" />
         </Container>
       </main>
     </>
