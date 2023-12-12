@@ -20,7 +20,7 @@ const AnimatedNumbers = ({ number }) => {
 
   useEffect(() => {
     sprintValue.on("change", (latest) => {
-      console.log(latest);
+      // console.log(latest);
       if (ref.current && latest.toFixed(0) <= number) {
         ref.current.textContent = latest.toFixed(0);
       }

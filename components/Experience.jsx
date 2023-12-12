@@ -50,6 +50,7 @@ const Experience = ({ experiences, title }) => {
   const { scrollYProgress } = useScroll({
     target: ref,
     offset: ["start end", "center start"],
+    // layoutEffect: false,
   });
   return (
     <>
@@ -63,7 +64,7 @@ const Experience = ({ experiences, title }) => {
           className="absolute left-9 h-full w-[4px] origin-top bg-dark"
           ref={ref}
         />
-        <ul className="ml-4 flex w-full flex-col items-start justify-between">
+        <ul className="ml-4 flex w-full flex-col items-start justify-between overflow-x-hidden">
           {experiences.map((project, index) => (
             <ExperienceCard
               key={project.label}

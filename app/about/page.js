@@ -1,3 +1,4 @@
+"use client";
 import AnimatedText from "@/components/AnimatedText";
 import AnimatedNumbers from "@/components/AnimatedNumbers";
 import Container from "@/components/Container";
@@ -29,7 +30,7 @@ const About = () => {
         <meta name="description" content="work and education about Ryan Guo" />
       </Head>
       <main className="flex-center mb-64">
-        <Container className="flex-center w-full flex-col">
+        <Container className="flex-center w-full flex-col overflow-y-hidden pt-16">
           <AnimatedText
             text={bio.title}
             className="pb-20 text-6xl md:text-8xl"

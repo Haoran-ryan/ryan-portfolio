@@ -13,7 +13,7 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body className={`${font.className} `}>
+      <body suppressHydrationWarning={true} className={`${font.className} `}>
         <div className="gradient" />
         <div className=" relative min-h-screen w-full bg-light font-mont">
           <NavBar />
