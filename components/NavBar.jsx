@@ -1,7 +1,10 @@
 "use client";
-import SideBar from "./SideBar";
-import Link from "next/link";
+import DarkModeIcon from "@mui/icons-material/DarkMode";
 import Image from "next/image";
+import Link from "next/link";
+import LightModeIcon from "@mui/icons-material/LightMode";
+import SideBar from "./SideBar";
+import useThemeToggle from "@/hooks/useThemeToggle";
 import { usePathname } from "next/navigation";
 import { socials, NavLinks } from "@/constants";
 import { motion } from "framer-motion";
@@ -14,13 +17,13 @@ export const NavLinkCard = ({ title, href, className = null }) => {
   return (
     <Link
       href={href}
-      className={`${className} group relative uppercase hover:text-dark ${
+      className={`${className} group relative uppercase hover:text-dark dark:text-light ${
         pathName === href ? "text-dark" : "text-dark/50"
       }`}
     >
       {title}
       <span
-        className={`ease absolute -bottom-0.5 left-0 inline-block h-[1px] bg-dark transition-[width] duration-300 group-hover:w-full ${
+        className={`ease absolute -bottom-0.5 left-0 inline-block h-[1px] bg-dark transition-[width] duration-300 group-hover:w-full dark:bg-light ${
           pathName === href ? "w-full" : "w-0"
         }`}
       >
@@ -31,8 +34,10 @@ export const NavLinkCard = ({ title, href, className = null }) => {
 };
 
 const NavBar = () => {
+  const [mode, setMode] = useThemeToggle();
+
   return (
-    <header className="flex-between sticky top-0 z-10 w-full bg-light px-32 py-6 font-medium shadow-md">
+    <header className="flex-between sticky top-0 z-10 w-full bg-light px-32 py-6 font-medium shadow-md dark:bg-dark">
       <Image
         src="/images/icon.png"
         alt="logo"
@@ -53,7 +58,7 @@ const NavBar = () => {
           speed={50}
           style={{ fontSize: "1rem" }}
           repeat={Infinity}
-          className=" hidden text-gray-700 lg:block"
+          className=" hidden text-gray-700 dark:text-coral-red lg:block"
         />
       </div>
 
@@ -81,6 +86,18 @@ const NavBar = () => {
             {social.icon}
           </MotionLink>
         ))}
+        <button
+          onClick={() => setMode(mode === "dark" ? "light" : "dark")}
+          className={`flex-center ml-3 rounded-full p-1 ${
+            mode === "dark" ? "bg-light text-dark" : "bg-dark text-light"
+          }`}
+        >
+          {mode === "dark" ? (
+            <LightModeIcon className="animate-spin-slow fill-dark" />
+          ) : (
+            <DarkModeIcon className="animate-spin-slow fill-light" />
+          )}
+        </button>
       </nav>
       <SideBar />
     </header>

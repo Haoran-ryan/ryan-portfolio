@@ -15,7 +15,7 @@ export const StaticCard = ({ statistics }) => {
       <span className="inline-block text-7xl font-bold text-coral-red">
         <AnimatedNumbers number={statistics.value} /> {`+`}
       </span>
-      <h2 className="text-xl font-medium capitalize text-dark/60">
+      <h2 className="text-xl font-medium capitalize text-dark/60 dark:text-light/60">
         {statistics.label}
       </h2>
     </div>
@@ -37,7 +37,7 @@ const About = () => {
           />
           <div className="grid w-full grid-cols-8 gap-16">
             <div className="flex-between col-span-full flex-col md:col-span-3 ">
-              <h2 className="mb-20 text-3xl font-bold uppercase text-dark/75 md:mb-4">
+              <h2 className="mb-20 text-3xl font-bold uppercase text-dark/75 dark:text-light/75 md:mb-4">
                 {bio.subtitle}
               </h2>
               {bio.bio.map((para, index) => (
@@ -52,8 +52,8 @@ const About = () => {
               ))}
             </div>
             {/* Profile picture */}
-            <div className="relative z-40 col-span-full h-max rounded-[2rem] border-2 border-solid border-dark bg-dark p-8 md:col-span-4">
-              <div className="absolute -top-4 right-3 -z-10 h-full  w-full rounded-2xl border border-neutral-100 bg-light shadow-md" />
+            <div className="relative z-40 col-span-full h-max rounded-[2rem] border-2 border-solid border-dark bg-dark p-8 dark:border-light dark:bg-light md:col-span-4">
+              <div className="absolute -top-4 right-3 -z-10 h-full  w-full rounded-2xl border border-neutral-100 bg-light shadow-md dark:bg-dark" />
               <Image
                 src={profilePicture}
                 alt="portrait front"
@@ -62,7 +62,7 @@ const About = () => {
             </div>
           </div>
           {/* statistics */}
-          <div className="flex-between mx-40 mt-20">
+          <div className="flex-between mx-40 mt-20 gap-10">
             {statistics.map((stat) => (
               <StaticCard key={stat.label} statistics={stat} />
             ))}

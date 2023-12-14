@@ -33,7 +33,7 @@ export const ProjectCard = ({ className = "", project, isFullWidth }) => {
             width={1000}
             height={400}
             alt={project.label}
-            className="h-auto w-full"
+            className="h-auto w-full object-cover"
           />
         </Link>
         <div

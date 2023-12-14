@@ -30,7 +30,7 @@ export const ExperienceCard = ({
           {label} &nbsp;{" "}
           <Link
             href={orgLink}
-            className="capitalize text-coral-red"
+            className="capitalize text-coral-red dark:text-primaryDark"
             target="_blank"
           >
             @{org}
@@ -54,14 +54,14 @@ const Experience = ({ experiences, title }) => {
   });
   return (
     <>
-      <h2 className="my-64 w-full text-center text-8xl font-bold text-dark/90">
+      <h2 className="my-64 w-full text-center text-8xl font-bold text-dark/90 dark:text-light/90">
         {title}
       </h2>
       <div className="relative mx-auto w-[75%]">
         {/* vertical scroll animation */}
         <motion.div
           style={{ scaleY: scrollYProgress }}
-          className="absolute left-9 h-full w-[4px] origin-top bg-dark"
+          className="absolute left-9 h-full w-[4px] origin-top bg-dark dark:bg-light"
           ref={ref}
         />
         <ul className="ml-4 flex w-full flex-col items-start justify-between overflow-x-hidden">

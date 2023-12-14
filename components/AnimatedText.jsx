@@ -1,6 +1,7 @@
 "use client";
 import { motion } from "framer-motion";
 import { quote, singleWord } from "@/utils/motions";
+
 const AnimatedText = ({ text, className = "" }) => {
   return (
     <div className="flex-center mx-auto w-full overflow-hidden py-2 text-center">
@@ -8,7 +9,7 @@ const AnimatedText = ({ text, className = "" }) => {
         variants={quote}
         initial="initial"
         animate="animate"
-        className={`${className} inline-block w-full font-bold capitalize text-dark`}
+        className={`${className} inline-block w-full font-bold capitalize text-dark dark:text-light`}
       >
         {text.split(" ").map((word, index) => (
           <motion.span

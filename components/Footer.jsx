@@ -15,10 +15,10 @@ const Footer = () => {
       initial="hidden"
       whileInView="show"
       viewport={{ once: false, amount: 0.25 }}
-      className="mt-20 w-full border-t-2 border-solid border-dark pt-5 font-medium "
+      className="mt-20 w-full border-t-2 border-solid border-dark pt-5 font-medium dark:border-light"
     >
       <motion.div variants={footerVariants} className="flex-center my-10">
-        <div className="ml-20 flex-auto text-2xl font-bold leading-loose text-dark xl:ml-40">
+        <div className="ml-20 flex-auto text-2xl font-bold leading-loose text-dark dark:text-light xl:ml-40">
           <span>Let us make something amazing together</span>
           <br />
           <span>
@@ -40,7 +40,7 @@ const Footer = () => {
                 whileHover={{ y: -5 }}
                 whileTap={{ scale: 0.9 }}
                 key={skill.name}
-                className="cursor-pointer rounded-full hover:shadow-md"
+                className="cursor-pointer rounded-full hover:shadow-md dark:shadow-white"
               >
                 <Image
                   src={skill.imgUrl}

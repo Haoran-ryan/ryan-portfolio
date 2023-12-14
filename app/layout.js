@@ -2,7 +2,6 @@ import { Montserrat } from "next/font/google";
 import "./globals.css";
 import NavBar from "@/components/NavBar";
 import Footer from "@/components/Footer";
-import Container from "@/components/Container";
 const font = Montserrat({ subsets: ["latin"], variable: "--font-mont" });
 
 export const metadata = {
@@ -15,7 +14,7 @@ export default function RootLayout({ children }) {
     <html lang="en">
       <body suppressHydrationWarning={true} className={`${font.className} `}>
         <div className="gradient" />
-        <div className=" relative min-h-screen w-full bg-light font-mont">
+        <div className=" relative min-h-screen w-full bg-light font-mont dark:bg-dark dark:text-light">
           <NavBar />
           {children}
           <Footer />

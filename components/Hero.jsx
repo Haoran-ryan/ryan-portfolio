@@ -31,14 +31,14 @@ const Hero = () => {
           <LinkButton
             label="Resume"
             href="http://www.google.com"
-            className="border-transparent bg-dark font-semibold text-light shadow-md hover:border-dark hover:bg-light hover:text-dark hover:shadow-xl"
+            className="border-transparent bg-dark font-semibold text-light shadow-md hover:border-dark hover:bg-light hover:text-dark hover:shadow-xl dark:bg-light dark:text-dark hover:dark:border-light hover:dark:bg-dark hover:dark:text-light"
             isDownload={true}
             icon={<FileDownloadIcon className="ml-1 w-6" />}
           />
           <LinkButton
             label="Contact"
             href="mailto:gryan@outlook.com.au"
-            className="ml-4 !border-[0] bg-light font-medium text-dark hover:underline"
+            className="ml-4 !border-[0] bg-light font-medium text-dark hover:underline dark:bg-dark dark:text-light"
             icon={<AlternateEmailIcon className="ml-1 w-6" />}
           />
         </div>

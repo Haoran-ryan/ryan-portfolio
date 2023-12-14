@@ -8,7 +8,7 @@ const SideBar = () => {
         {SideBarLinks.map((link) => (
           <li
             key={link.name}
-            className="flex-between ml-[-80px] h-[60px] w-[120px] capitalize  duration-300 hover:scale-150 hover:underline group-hover:ml-[30px]"
+            className="flex-between ml-[-80px] h-[60px] w-[120px] capitalize  duration-300 hover:scale-150 hover:underline group-hover:ml-[30px] dark:text-light"
           >
             <Link href={link.url} className="flex-between w-full ">
               {link.name} {link.icon}

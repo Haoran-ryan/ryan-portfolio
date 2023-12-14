@@ -131,7 +131,7 @@ export const MyProjects = [
     type: "Full stack",
     org: "Self Employed",
     orgLink: "https://share-prompts-tan.vercel.app/",
-    img: "/images/placeholder.png",
+    img: "/images/projects/shareprompt.png",
     time: "July 2023",
     address: "Sydney",
     work: "A Full-stack social platform built with NextJS and Tailwind where users can share the trendy AI prompts to enhance their productivity and creativity.",
