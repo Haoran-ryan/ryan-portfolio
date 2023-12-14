@@ -2,6 +2,8 @@ import { Montserrat } from "next/font/google";
 import "./globals.css";
 import NavBar from "@/components/NavBar";
 import Footer from "@/components/Footer";
+import Script from "next/script";
+
 const font = Montserrat({ subsets: ["latin"], variable: "--font-mont" });
 
 export const metadata = {
@@ -13,7 +15,14 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body suppressHydrationWarning={true} className={`${font.className} `}>
-        <div className="gradient" />
+        <Script id="theme-switcher" strategy="beforeInteractive">
+          {`if (localStorage.theme === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+  document.documentElement.classList.add('dark')
+} else {
+  document.documentElement.classList.remove('dark')
+}`}
+        </Script>
+        <div className="gradient dark:hidden" />
         <div className=" relative min-h-screen w-full bg-light font-mont dark:bg-dark dark:text-light">
           <NavBar />
           {children}

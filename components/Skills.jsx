@@ -23,7 +23,7 @@ const Skills = () => {
       <h2 className="mt-64 w-full text-center text-8xl font-bold text-dark/90 dark:text-light/90">
         Skills
       </h2>
-      <div className="flex-center relative h-screen w-full overflow-y-hidden rounded-full bg-circularLight">
+      <div className="flex-center relative h-screen w-full overflow-y-hidden rounded-full bg-circularLight dark:bg-circularDark">
         <motion.div
           whileHover={{ scale: 1.1 }}
           className="flex-center cursor-pointer rounded-full bg-dark px-6 py-10 text-light shadow-dark dark:bg-light dark:text-dark dark:shadow-light"

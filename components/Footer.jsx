@@ -14,7 +14,7 @@ const Footer = () => {
       variants={staggerChildren}
       initial="hidden"
       whileInView="show"
-      viewport={{ once: false, amount: 0.25 }}
+      viewport={{ once: true, amount: 0.25 }}
       className="mt-20 w-full border-t-2 border-solid border-dark pt-5 font-medium dark:border-light"
     >
       <motion.div variants={footerVariants} className="flex-center my-10">
@@ -40,7 +40,7 @@ const Footer = () => {
                 whileHover={{ y: -5 }}
                 whileTap={{ scale: 0.9 }}
                 key={skill.name}
-                className="cursor-pointer rounded-full hover:shadow-md dark:shadow-white"
+                className="cursor-pointer rounded-full hover:shadow-md dark:bg-light/90"
               >
                 <Image
                   src={skill.imgUrl}

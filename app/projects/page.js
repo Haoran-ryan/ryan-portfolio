@@ -15,13 +15,13 @@ export const ProjectCard = ({ className = "", project, isFullWidth }) => {
           isFullWidth
             ? "flex-between rounded-3xl p-12"
             : "flex-center  flex-col rounded-2xl p-6"
-        } relative  h-[95%] w-[95%] rounded-br-2xl border border-solid  border-dark bg-light shadow-xl hover:shadow-2xl`}
+        } relative  h-[95%] w-[95%] rounded-br-2xl border border-solid  border-dark bg-light shadow-xl hover:shadow-2xl dark:border-light dark:bg-dark dark:shadow-orange-100 `}
       >
         {/* dark 3d effect */}
         <div
           className={`absolute -right-3 top-0 -z-10 h-[103%] w-[101%] rounded-br-3xl ${
             isFullWidth ? "rounded-[2.5rem]" : "rounded-[2rem]"
-          } bg-dark`}
+          } bg-dark dark:bg-light`}
         />
         <Link
           href={project.orgLink}
@@ -41,7 +41,7 @@ export const ProjectCard = ({ className = "", project, isFullWidth }) => {
             isFullWidth ? "w-1/2  pl-6" : "mt-4 w-full"
           }`}
         >
-          <span className="text-xl font-medium text-primary">
+          <span className="text-xl font-medium text-primary dark:text-primaryDark">
             {project.type}
           </span>
           <Link
@@ -57,7 +57,9 @@ export const ProjectCard = ({ className = "", project, isFullWidth }) => {
               {project.label}
             </h2>
           </Link>
-          <p className="my-2 font-medium text-dark ">{project.work}</p>
+          <p className="my-2 font-medium text-dark dark:text-light">
+            {project.work}
+          </p>
           <div
             className={`mt-2  ${
               isFullWidth ? "flex-center" : "flex-between w-full"
@@ -73,7 +75,7 @@ export const ProjectCard = ({ className = "", project, isFullWidth }) => {
               href={project.orgLink}
               className={`rounded-lg font-semibold  ${
                 isFullWidth
-                  ? "ml-4 bg-dark p-2 px-6 text-lg text-light "
+                  ? "ml-4 bg-dark p-2 px-6 text-lg text-light dark:bg-light dark:text-dark"
                   : "underline"
               }`}
             >

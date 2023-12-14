@@ -37,7 +37,7 @@ const NavBar = () => {
   const [mode, setMode] = useThemeToggle();
 
   return (
-    <header className="flex-between sticky top-0 z-10 w-full bg-light px-32 py-6 font-medium shadow-md dark:bg-dark">
+    <header className="flex-between sticky top-0 z-10 w-full bg-light px-32 py-6 font-medium shadow-md dark:bg-dark dark:shadow-white">
       <Image
         src="/images/icon.png"
         alt="logo"
