@@ -7,8 +7,7 @@ export const SkillCard = ({ label, x, y }) => {
     <motion.div
       whileHover={{ scale: 1.1 }}
       initial={{ x: 0, y: 0 }}
-      whileInView={{ x, y }}
-      transition={{ duration: 1.01 }}
+      whileInView={{ x, y, transition: { duration: 1.5 } }}
       viewport={{ once: false, amount: 0.25 }}
       className="flex-center absolute animate-pulse cursor-pointer rounded-full border-dark bg-dark px-6 py-3 font-semibold text-light opacity-80 shadow-sm hover:z-50 hover:animate-none hover:border hover:bg-light hover:text-dark/75 hover:opacity-100 hover:shadow-xl dark:bg-light dark:text-dark dark:shadow-light dark:hover:bg-dark dark:hover:text-light"
     >

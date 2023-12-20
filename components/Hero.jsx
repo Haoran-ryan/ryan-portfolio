@@ -9,14 +9,16 @@ import AlternateEmailIcon from "@mui/icons-material/AlternateEmail";
 const Hero = () => {
   return (
     <div className="flex-between w-full flex-col gap-x-6 md:flex-row">
-      <div className="w-full md:w-1/3">
+      <div className="w-full md:w-1/2">
         <Image
           src={profilePic}
           alt="hero"
-          className=" h-auto w-full md:w-[35vw]"
+          className=" h-auto w-full"
+          sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 50vw"
+          priority={true}
         />
       </div>
-      <div className="flex w-full flex-col items-center self-center md:w-2/3">
+      <div className="flex w-full flex-col items-center self-center md:w-1/2">
         {/* <span className="text-coral-red">Crafting </span>Digital Alchemy */}
         <AnimatedText
           text="Crafting Digital Alchemy with Code and Design"

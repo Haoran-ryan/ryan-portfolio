@@ -58,6 +58,8 @@ const About = () => {
                 src={profilePicture}
                 alt="portrait front"
                 className=" h-auto w-full rounded-2xl "
+                priority={true}
+                sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
               />
             </div>
           </div>
